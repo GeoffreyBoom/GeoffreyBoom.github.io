@@ -1,12 +1,9 @@
 <body>
   <form>
-    <table>
-      <tbody>
-        <tr><td>How long should light stay on?:</td><td><input type="number" id="light_on" value="6"></td></tr>
-        <tr><td>How often should weather update?:</td><td><input type="number" id="weather_interval" value="10"> minutes</td></tr>
-      </tbody>
-    </table>
-    <input type="button" id="save" onclick="send();">
+    How long should light stay on?:
+    <input type="number" id="light_on" value="6">
+    How often should weather update?:<input type="number" id="weather_interval" value="10"> minutes
+    <input type="button" id="save" value="save">
   </form>
   
   <script>
@@ -15,12 +12,12 @@
     	function{
     		params = {
     			document.getElementById("light_on").value,
-              	document.getElementById("weather_interval").value
+    			document.getElementById("weather_interval").value
     		}
-    			var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(params));
-         		document.location = location;
-    	}
-
+    		var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(params));
+    		document.location = location;
+    	},
+    	false
     );
   </script>
 </body>

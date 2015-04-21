@@ -19,15 +19,4 @@
     <br />
     <input type="button" id="save" value="save" onclick="save()">
   </form>
-  
-  <script>
-  	function save(){
-  		params = {
-  			"light_on": document.getElementById("light_on").value,
-  			"weather_interval": document.getElementById("weather_interval").value
-  		}
-  		location.href = "pebblejs://close#" + encodeURIComponent(JSON.stringify(params));
-  		document.write("oh...");
-  	}
-  </script>
 </body>

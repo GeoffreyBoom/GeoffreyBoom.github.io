@@ -16,8 +16,8 @@
     			"light_on": document.getElementById("light_on").value,
     			"weather_interval": document.getElementById("weather_interval").value
     		}
-    		var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(params));
-    		location.href = location;
+    		location.href = "pebblejs://close#" + encodeURIComponent(JSON.stringify(params));
+;
     	},
     	false
     );

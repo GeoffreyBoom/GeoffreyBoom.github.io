@@ -5,21 +5,16 @@
     <br />
     How often should weather update?:<input type="number" id="weather_interval" value="10"> minutes
     <br />
-    <input type="button" id="save" value="save">
+    <input type="button" id="save" value="save" onclick="save()">
   </form>
   
   <script>
-    var save_button = document.getElementById("save");
-    save_button.addEventListener("click",
-    	function{
-    		params = {
-    			"light_on": document.getElementById("light_on").value,
-    			"weather_interval": document.getElementById("weather_interval").value
-    		}
-    		location.href = "pebblejs://close#" + encodeURIComponent(JSON.stringify(params));
-;
-    	},
-    	false
-    );
+  	function save(){
+  		params = {
+  			"light_on": document.getElementById("light_on").value,
+  			"weather_interval": document.getElementById("weather_interval").value
+  		}
+  		location.href = "pebblejs://close#" + encodeURIComponent(JSON.stringify(params));
+  	}
   </script>
 </body>

@@ -17,7 +17,7 @@
     			"weather_interval": document.getElementById("weather_interval").value
     		}
     		var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(params));
-    		document.location = location;
+    		location.href = location;
     	},
     	false
     );
